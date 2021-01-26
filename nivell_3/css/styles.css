@@ -1,0 +1,32 @@
+/* COLORS */
+body {
+  background-color: #fdfaf6;
+}
+
+.container h2 {
+  color: #f8bc6d;
+}
+
+.box {
+  border: 2px solid #f8bc6d;
+  padding: 20px;
+  margin: 5px;
+}
+
+.ok-btn {
+  background-color: #f8bc6d;
+  color: #fff;
+}
+
+.ul-box {
+  background-color: #f8bc6d;
+  width: 80%;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.ul-box li {
+  color: #fff;
+  font-size: 20px;
+}
+/*# sourceMappingURL=styles.css.map */

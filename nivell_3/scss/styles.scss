@@ -1,0 +1,35 @@
+@import "helpers/variables";
+
+
+body {
+    background-color: $background-grey;
+}
+
+.container {
+    h2 {
+        color: $light-orange
+    }
+}
+
+.box {
+    border: $border;
+    padding: 20px;
+    margin: 5px
+}
+
+.ok-btn {
+    background-color: $light-orange;
+    color: $white
+}
+
+.ul-box {
+    background-color: $light-orange;
+    width: 80%;
+    border-radius: 12px;
+    margin-top: 8px;
+    li {
+        color: $white;
+        font-size: 20px;
+
+    }
+}
