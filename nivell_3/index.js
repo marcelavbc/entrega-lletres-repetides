@@ -4,7 +4,7 @@ const exercici1Button = document.getElementById('rep-letters-butt')
 
 exercici1Button.addEventListener('click', event => {
     const string = document.getElementById('name1').value;
-    document.getElementById('vowels').value = '';
+    document.getElementById('name1').value = '';
     const ul = document.getElementById('lettersUl')
     for (let i = 0; i < string.length; i++) {
         let li = document.createElement("li");
