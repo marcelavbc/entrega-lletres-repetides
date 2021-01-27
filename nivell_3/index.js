@@ -63,15 +63,13 @@ exercici3Button.addEventListener('click', event => {
     const string = document.getElementById('map-input').value;
     document.getElementById('map-input').value = '';
     const array = string.split(' ').join('').split('');
-    console.log(array)
     let object = countOccurrences(array);
     const ul = document.getElementById('object-list');
-
+    console.log('this is the object:', object);
     for (let key in object) {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(`He trobat ${object[key]} ocurrència(s) de la lletra ${key}`));
-        ul.append(li)
-        console.log(key + " " + object[key])
+        ul.append(li);
     }
 })
 
