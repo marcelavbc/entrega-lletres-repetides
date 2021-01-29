@@ -1,21 +1,21 @@
 //Exercici 1: 
 
-const exercici1Button = document.getElementById('rep-letters-butt')
+const exercici1Button = document.getElementById('rep-letters-butt');
 
 exercici1Button.addEventListener('click', event => {
     const string = document.getElementById('name1').value;
     document.getElementById('name1').value = '';
-    const ul = document.getElementById('lettersUl')
+    const ul = document.getElementById('lettersUl');
     for (let i = 0; i < string.length; i++) {
         let li = document.createElement("li");
         li.appendChild(document.createTextNode(string[i]));
-        ul.appendChild(li)
-    }
-})
+        ul.appendChild(li);
+    };
+});
 
 //Exercici 2: 
 
-const exercici2Button = document.getElementById('find-vowels')
+const exercici2Button = document.getElementById('find-vowels');
 
 exercici2Button.addEventListener('click', event => {
 
@@ -24,11 +24,11 @@ exercici2Button.addEventListener('click', event => {
     const ul = document.getElementById('vowelsUl');
     const vowels = /[aeiou]/gi;
     const consonants = /(?![aeiou])[a-z]/gi;
-    const numbers = /[0-9]/g
+    const numbers = /[0-9]/g;
 
     const vowelsFind = string.match(vowels);
     const consonantsFind = string.match(consonants);
-    const numbersFind = string.match(numbers)
+    const numbersFind = string.match(numbers);
 
     for (let i = 0; i < string.length; i++) {
         const li = document.createElement("li");
@@ -46,15 +46,15 @@ exercici2Button.addEventListener('click', event => {
             ul.appendChild(li);
         }
     }
-})
+});
 
 //Exercici 3: 
 
-const exercici3Button = document.getElementById('letters-occ')
+const exercici3Button = document.getElementById('letters-occ');
 
 function countOccurrences(arr) {
     return arr.reduce(function (acc, curr) {
-        acc[curr] = acc[curr] + 1 || 1
+        acc[curr] = acc[curr] + 1 || 1;
         return acc;
     }, {});
 }
@@ -65,13 +65,14 @@ exercici3Button.addEventListener('click', event => {
     const array = string.split(' ').join('').split('');
     let object = countOccurrences(array);
     const ul = document.getElementById('object-list');
-    console.log('this is the object:', object);
+    console.log('Array to reduce:', array);
+    console.log('This is the object after the reduce method. We use the OBJECT\'s key and value (and NOT the array) to show it in the screen', object);
     for (let key in object) {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(`He trobat ${object[key]} ocurrència(s) de la lletra ${key}`));
         ul.append(li);
     }
-})
+});
 
 //Exercici 4: 
 
@@ -84,13 +85,12 @@ exercici4Button.addEventListener('click', event => {
     document.getElementById('last-name').value = '';
 
     let fullName = firstName.concat('', lastName);
-    console.log(fullName)
     for (let i = 0; i < fullName.length; i++) {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(fullName[i]));
-        ul.append(li)
-    }
-})
+        ul.append(li);
+    };
+});
 
 //Exercici 1 - nivell 2: 
 
@@ -101,22 +101,18 @@ exercici5Button.addEventListener('click', event => {
     document.getElementById('email-find').value = '';
     const ul = document.getElementById('find-email');
     let allEmails = string.match(/([\w\u00C0-\u024F.-]+@[\w\u00C0-\u024F.-]+\.[a-z0-9_-]+)/gi);
-    let uniqueEmails = []
-    console.log('antes', uniqueEmails)
+    let uniqueEmails = [];
 
     for (let i = 0; i < allEmails.length; i++) {
         if (uniqueEmails.indexOf(allEmails[i]) === -1) {
-            uniqueEmails.push(allEmails[i])
+            uniqueEmails.push(allEmails[i]);
         }
     }
-    console.log('despues', uniqueEmails)
-
     for (let i = 0; i < uniqueEmails.length; i++) {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(uniqueEmails[i]));
-        ul.append(li)
+        ul.append(li);
     }
-
 })
 
 
